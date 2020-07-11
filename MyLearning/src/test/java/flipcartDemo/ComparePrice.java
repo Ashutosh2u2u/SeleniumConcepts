@@ -16,7 +16,7 @@ public class ComparePrice {
 		
 		//Open Chrome browser
 		System.setProperty("webdriver.chrome.silentOutput", "true");
-		System.setProperty("webdriver.chrome.driver","D:\\Automation\\chrome\\chromedriver_win32\\chromedriver.exe"); 
+		//System.setProperty("webdriver.chrome.driver","D:\\Automation\\chrome\\chromedriver_win32\\chromedriver.exe"); 
 		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("chrome.switches","--disable-extensions");
@@ -28,7 +28,7 @@ public class ComparePrice {
 		System.out.println("site open");
 		Thread.sleep(5000);
 		
-		driver.findElement(By.xpath(".//*[@id='container']/div/div[2]/div[2]/div/div[2]/div/div[3]/div/div[1]/div[1]/div/a[1]/div[1]/div/div[1]/img")).click();	
+		driver.findElement(By.xpath("//*[@id=\"container\"]/div/div[3]/div[2]/div/div[2]/div[2]/div/div[2]/div/a[1]/div[1]/div/div/img")).click();	
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		Thread.sleep(5000);
 		System.out.println("p");
